@@ -1,0 +1,18 @@
+# byte-compiled
+__pycache__/
+*.py[co]
+
+# distribution / packaging
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+
+# logs & lockfiles
+*.log*
+
+# node
+node_modules/
+#yarn.lock

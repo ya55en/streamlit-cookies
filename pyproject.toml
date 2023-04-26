@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "streamlit-cookies"
+version = "0.1.0"
+description = "Cookie manager component for Streamlit"
+authors = ["Yassen Damyanov <yd@itlabs.bg>"]
+readme = "README.md"
+packages = [{include = "streamlit_cookies"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.18.0"
+
+[tool.poetry.group.dev.dependencies]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
