@@ -10,6 +10,7 @@ type TArgs = {
 }
 
 const cookies = new Cookies()
+let lastResult: any = null
 
 /**
  * Map method names to the cookie-related method bodies.
@@ -50,7 +51,11 @@ function onRender(event: Event): void {
   const method: TMethod = data.args.method || "N/A"
 
   const result = cookieMethods[method](data.args)
-  Streamlit.setComponentValue(result)
+
+  if (result && result !== lastResult) {
+    lastResult = result
+    Streamlit.setComponentValue(result)
+  }
 }
 
 Streamlit.events.addEventListener(Streamlit.RENDER_EVENT, onRender)
